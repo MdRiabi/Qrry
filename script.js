@@ -38,3 +38,13 @@ hobbies.concat(['writing , cors , cheese']); //Combines two or more arrays. This
 
 // retrieving index in the array
 console.log(hobbies.indexOf('sport'));// Returns the index of the first occurrence of a value in an array, or -1 if it is not present.
+//find calls predicate once for each element of the array, in ascending order, 
+//until it finds one where predicate returns true. If such an element is found, 
+//find immediately returns that element value. Otherwise, find returns undefined.
+//Returns the value of the first element in the array where predicate is true, and undefined otherwise.
+
+const persData = [{name:'med'},{name: 'ali'}];
+
+const med = persData.find((per, idx, persons) => {
+    return per.name === 'med';
+});
