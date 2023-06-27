@@ -32,3 +32,6 @@ hobbies.splice(0,0,'swimming');// in the first position 0 don't remove (the seco
 hobbies.slice();//Returns a copy of a section of an array. For both start and end, a negative index can be used to indicate an offset from the end of the array. For example, -2 refers to the second to last element of the array.
 
 
+//adding array to array with concat() function
+
+hobbies.concat(['writing , cors , cheese']); //Combines two or more arrays. This method returns a new array without modifying any existing arrays.
