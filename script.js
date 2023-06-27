@@ -16,3 +16,10 @@ for(const data of person){
 }
 
 
+// adding data to array
+
+const hobbies = ['sport', 'Cooking'];
+hobbies.push('Reading');//add reading in the end of array
+hobbies.unshift('Coding'); // adding element in the first position of array
+hobbies.pop();//remove the last  element from array
+hobbies.shift();//remove the first element from array
