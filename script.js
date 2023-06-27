@@ -27,3 +27,8 @@ hobbies.shift();//remove the first element from array
 
 hobbies.splice();//Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
 hobbies.splice(0,0,'swimming');// in the first position 0 don't remove (the second parameter is 0) and add 'swimming' to the hobbies array.
+
+
+hobbies.slice();//Returns a copy of a section of an array. For both start and end, a negative index can be used to indicate an offset from the end of the array. For example, -2 refers to the second to last element of the array.
+
+
