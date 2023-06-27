@@ -34,7 +34,7 @@ hobbies.slice();//Returns a copy of a section of an array. For both start and en
 
 //adding array to array with concat() function
 
-hobbies.concat(['writing , cors , cheese']); //Combines two or more arrays. This method returns a new array without modifying any existing arrays.
+hobbies.concat(['writing' ,'cors', 'cheese']); //Combines two or more arrays. This method returns a new array without modifying any existing arrays.
 
 // retrieving index in the array
 console.log(hobbies.indexOf('sport'));// Returns the index of the first occurrence of a value in an array, or -1 if it is not present.
@@ -48,3 +48,5 @@ const persData = [{name:'med'},{name: 'ali'}];
 const med = persData.find((per, idx, persons) => {
     return per.name === 'med';
 });
+
+hobbies.includes('cors') // Determines whether an array includes a certain element, returning true or false as appropriate.
