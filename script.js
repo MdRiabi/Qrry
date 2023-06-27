@@ -73,3 +73,12 @@ const priceObj = {index:idx , taxAdjPrice: price * (1+tax)};
     // or taxAdjustedPrices.push(price*(1+tax));
 
 });
+
+
+// using example of map function
+
+const updatedPrices = prices.map((price , idx , prices) => {
+
+    const priceObj = {index:idx , taxAdjPrice: price * (1+tax)};
+    return priceObj;
+});
