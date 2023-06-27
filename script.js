@@ -50,3 +50,26 @@ const med = persData.find((per, idx, persons) => {
 });
 
 hobbies.includes('cors') // Determines whether an array includes a certain element, returning true or false as appropriate.
+
+
+const prices = [10.99, 20.99, 30.99,24,63.5,64.5];
+const tax = 0.19;
+const taxAdjustedPrices = [];
+
+// using a simple for loop
+
+for( const price of prices){
+    taxAdjustedPrices.push(price*(1+tax));
+
+}
+
+//or we can use forEach loop
+
+prices.forEach((price , idx , prices) => {
+
+const priceObj = {index:idx , taxAdjPrice: price * (1+tax)};
+
+ taxAdjustedPrices.push(priceObj);
+    // or taxAdjustedPrices.push(price*(1+tax));
+
+});
