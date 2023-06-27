@@ -23,3 +23,7 @@ hobbies.push('Reading');//add reading in the end of array
 hobbies.unshift('Coding'); // adding element in the first position of array
 hobbies.pop();//remove the last  element from array
 hobbies.shift();//remove the first element from array
+
+
+hobbies.splice();//Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
+hobbies.splice(0,0,'swimming');// in the first position 0 don't remove (the second parameter is 0) and add 'swimming' to the hobbies array.
