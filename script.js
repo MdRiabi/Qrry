@@ -144,4 +144,14 @@ const objjArray  = [{price: 12.52},{price:254.23},{price:145.25},{price: 152.323
 const addition = objjArray.map(objt => objt.price).reduce((p ,c) => p+c,0 ); 
 
 
- More On Arrays &Iterables 19. Arrays & Strings - split() and join()
+ //More On Arrays &Iterables 19. Arrays & Strings - split() and join()
+
+//String methods split and join 
+const str = 'new york;10.33,145';
+//Split a string into substrings using the specified separator and return them as an array.
+const newSte = str.split(';');
+
+const nameFragment = ['med', 'riabi'];
+//Adds all the elements of an array into a string, separated by the specified separator string.
+
+const fragment = nameFragment.join('');
