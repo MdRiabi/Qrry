@@ -155,3 +155,24 @@ const nameFragment = ['med', 'riabi'];
 //Adds all the elements of an array into a string, separated by the specified separator string.
 
 const fragment = nameFragment.join('');
+
+// Spread Operator ...
+
+const copiedFragment = [...nameFragment];
+
+nameFragment.push('Mr'); // Mr appear only in the nameFragment array
+
+
+//for allow the modification in the origine and copied array we should use map method
+const persone = [{name:'med', age:30},{name:'ali', age:20}];
+const copiedPerson = persone.map(person => ({
+    name: person.name,
+    age: person.age
+
+}));
+persone.push({name:'lili', age:26});
+
+persone[0].age= 22;
+
+console.log(persone , copiedPerson); //we got the same element in the two arrays 
+
