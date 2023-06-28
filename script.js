@@ -82,3 +82,33 @@ const updatedPrices = prices.map((price , idx , prices) => {
     const priceObj = {index:idx , taxAdjPrice: price * (1+tax)};
     return priceObj;
 });
+
+
+ // sort : Sorts an array in place. This method mutates the array and returns a reference to the same array.
+ // Function used to determine the order of the elements. 
+ //  It is expected to return a negative value if the first argument is less than the second argument,
+ // zero if they're equal, and a positive value otherwise. If omitted, the elements are sorted in ascending, ASCII character order. 
+
+const sortPrices = prices.sort((a ,b) => {
+
+    if(a>b){
+        return 1;
+    }else if(a===b{
+
+        return 0;
+    } else{
+        return -1  ;
+    }
+});
+
+// Reverses the elements in an array in place. 
+// This method mutates the array and returns a reference to the same array.
+sortPrices.reverse();
+
+
+
+// Returns the elements of an array that meet the condition specified in a callback function.
+// A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+const filtredArray = prices.filter((price , index , prices) => {
+    return price >6 ;
+});
