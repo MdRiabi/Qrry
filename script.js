@@ -112,3 +112,7 @@ sortPrices.reverse();
 const filtredArray = prices.filter((price , index , prices) => {
     return price >6 ;
 });
+
+//with the arrow function we can make short the expression 
+
+const filtredArray1 = prices.filter( p=> p>6);
