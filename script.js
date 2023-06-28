@@ -135,3 +135,13 @@ const summ = prices.reduce((prevValue, currentValue) =>{
 // we can optimaze the reduce function 
 
 const summ1 = prices.reduce((prevValue , currentValue) => prevValue + currentValue , 0);
+
+
+// we can use map and reduce function bothly in the same instruction 
+
+const objjArray  = [{price: 12.52},{price:254.23},{price:145.25},{price: 152.323}];
+
+const addition = objjArray.map(objt => objt.price).reduce((p ,c) => p+c,0 ); 
+
+
+ More On Arrays &Iterables 19. Arrays & Strings - split() and join()
