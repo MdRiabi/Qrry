@@ -93,7 +93,7 @@ const sortPrices = prices.sort((a ,b) => {
 
     if(a>b){
         return 1;
-    }else if(a===b{
+    }else if(a===b){
 
         return 0;
     } else{
@@ -116,3 +116,22 @@ const filtredArray = prices.filter((price , index , prices) => {
 //with the arrow function we can make short the expression 
 
 const filtredArray1 = prices.filter( p=> p>6);
+
+filtredArray1.reduce();
+
+
+// using forEach loop and reduce function for calculate the sum of array elements 
+let sum = 0;
+prices.forEach((price) => {
+sum+= price;
+});
+
+//reduce version 
+
+const summ = prices.reduce((prevValue, currentValue) =>{
+    return prevValue + currentValue;
+}, 0);
+
+// we can optimaze the reduce function 
+
+const summ1 = prices.reduce((prevValue , currentValue) => prevValue + currentValue , 0);
