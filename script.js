@@ -176,3 +176,9 @@ persone[0].age= 22;
 
 console.log(persone , copiedPerson); //we got the same element in the two arrays 
 
+//destructuring array information data
+const name = ['med', 'ali', 'Mr',20];
+const firstName =name[0];
+const lastName = name[1];
+// we can do better 
+const[firstName1,lastName1, otherInfos ] = name;
