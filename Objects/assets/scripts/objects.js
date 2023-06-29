@@ -14,14 +14,19 @@ const renderMovies = () => {
     }
     else{
         movieList.classList.add('visible');
-
     }
-   
+    movieList.innerHTML = '';
+
     movies.forEach((movie) => {
         const movieEl = document.createElement('li');
-        movieEl.textContent = movie.info.title;
+        let text = movie.info.title + ' - ';
+        for(const key in movie.info){
+            if(key !== 'title'){
+                text+= text + `${key}: ${movie.info[key]}`;
+            }
+        }
+        movieEl.textContent = text;
         movieList.append(movieEl);
-         movieList.innerHTML = '';
     });
 };
 
@@ -35,7 +40,6 @@ const addMovieHandler = () => {
         return;
     }
     const newMovie = {
-
         info:{
             info: title,
             [extraName]: extraValue
@@ -48,5 +52,5 @@ const addMovieHandler = () => {
 };
 
 
-addMoviesBtn.addEventListener('click', addMovieHandler );
+addMoviesBtn.addEventListener('click', addMovieHandler);
 
