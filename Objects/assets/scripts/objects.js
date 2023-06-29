@@ -6,7 +6,7 @@ const movies = [];
 
 //rendring the movie element in tthe list wich have the movie-list id.
 
-const renderMovies = () => {
+const renderMovies = (filter = '') => {
 
     const movieList = document.getElementById('movie-list');
     if(movies.length === 0) {
@@ -17,7 +17,8 @@ const renderMovies = () => {
     }
     movieList.innerHTML = '';
 
-    movies.forEach((movie) => {
+    const filtredMovies =!filter ? movies : movies.filter(movie => movie.info.title.includes(filter));
+filtredMovies.forEach((movie) => {
         const movieEl = document.createElement('li');
         let text = movie.info.title + ' - ';
         for(const key in movie.info){
@@ -29,6 +30,14 @@ const renderMovies = () => {
         movieList.append(movieEl);
     });
 };
+
+// search function for movies
+
+const searchMovieHandler = () => {
+    const filterTerm = document.getElementById('filter-title');
+    renderMovies('filterTerms');
+};
+
 
 // add the movie in the movies list
 const addMovieHandler = () => {
@@ -53,4 +62,6 @@ const addMovieHandler = () => {
 
 
 addMoviesBtn.addEventListener('click', addMovieHandler);
+searchBtn.addEventListener('click' , searchMovieHandler);
 
+//14. Understanding Chaining (Property & Method Chaining)
